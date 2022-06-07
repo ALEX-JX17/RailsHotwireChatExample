@@ -1,7 +1,7 @@
 <div id="<%= dom_id message %>">
   <p>
-    <strong>Body:</strong>
     <%= message.body %>
-    <%= button_to "Erase", message, method: :delete %>
+    <%= button_to "X", message, method: :delete %>
+    <!-- <%= message.created_at %> -->
   </p>
 </div>
