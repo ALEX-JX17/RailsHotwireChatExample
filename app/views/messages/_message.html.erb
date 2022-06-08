@@ -1,7 +1,12 @@
 <div id="<%= dom_id message %>">
   <p>
     <%= message.body %>
-    <%= button_to "X", message, method: :delete %>
-    <!-- <%= message.created_at %> -->
+    <%= link_to "Edit", edit_message_path(message), 
+      data:{ turbo_method: :post }  %>
+    <%= link_to "Delete", message, 
+      data:{ turbo_method: :delete }  %> 
+      <!-- Another way to make a link to send to Edit using turbo_stream -->
+    <!-- <%= button_to "Edit", edit_message_path(message), method: :post %>
+    <%= button_to "Delete", message, method: :delete %> -->
   </p>
 </div>
