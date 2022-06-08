@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "messages#index"
   resources :messages do 
     member do 
-      # I need acces to Edit by Post 'cause of turbo_stream doens't proccess GET
+      # It's necesary the acess to Edit by POST 'cause of turbo_stream doesn't proccess GET 
       post :edit
     end
   end
