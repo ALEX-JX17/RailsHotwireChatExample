@@ -8,6 +8,6 @@
 /           li
 /             = error.full_message
 
-= form_with(model: message) do |form|
-  = form.text_area :body
-  = form.submit
+= form_with(model: message) do |f|
+  = f.text_area :body
+  = f.submit

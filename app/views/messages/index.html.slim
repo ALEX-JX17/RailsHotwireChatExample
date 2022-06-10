@@ -1,13 +1,6 @@
 h1
-  | CHAT
-p[style="color: green"]
-  = notice
-p
-  => "Full page refreshed at:"
-  = Time.now
-p id="messages_count"
-  = "Total messages:" 
-  =< Message.count
+  = "CHAT"
+  
 #new_message
   = render partial: "messages/form", locals: { message: Message.new }
 #messages
